@@ -1,4 +1,4 @@
-# Single SPA 示例 
+# Single SPA 示例
 
 基于：[simple-single-spa-webpack-example](https://github.com/joeldenning/simple-single-spa-webpack-example)
 
@@ -7,7 +7,13 @@ A simple example of how to use webpack with [single-spa](https://github.com/joel
 This repository hopefully will be helpful for starting your own single-spa project. It has a react application and an angular application coexisting in a minimalistic way. If this project turns out to be helpful to people, I can add some more documentation, comments in the code, etc.
 
 ## How to use it
+
 1. Clone this project
 2. `yarn install` (or `npm install`)
 3. `yarn watch` (or `npm run watch`)
 4. Open up http://localhost:9090 in a web browser.
+
+## debug
+
+npm link single-spa
+将代码中引用地址改成 single-spa/src/single-spa.js 即可调试

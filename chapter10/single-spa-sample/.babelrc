@@ -1,13 +1,15 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["last 2 versions"]
-      }
-    }],
-    ["react"]
+    "@babel/react",
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "ie >= 7"]
+        }
+      },
+      "es2015"
+    ]
   ],
-  "plugins": [
-    "syntax-dynamic-import",
-  ]
+  "plugins": ["@babel/plugin-syntax-dynamic-import"]
 }

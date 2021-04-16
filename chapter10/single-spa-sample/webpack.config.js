@@ -29,14 +29,19 @@ module.exports = {
   },
   module: {
     rules: [{
-        test: /\.js?$/,
-        exclude: [path.resolve(__dirname, 'node_modules')],
+      test: /\.js?$/,
+      // exclude: [path.resolve(__dirname, 'node_modules')],
+      use: {
         loader: 'babel-loader',
-      },
-      {
-        test: /\.tsx?$/,
-        loader: 'ts-loader',
-      },
+        options: {
+          'presets': ['@babel/preset-react', '@babel/preset-env']
+        }
+      }
+    },
+    {
+      test: /\.tsx?$/,
+      loader: 'ts-loader',
+    },
     ],
   },
   node: {
